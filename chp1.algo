@@ -1,0 +1,37 @@
+ALGORITHM AnalysePhrase
+VAR
+    phrase: string
+    longueur: integer = 0
+    mots: integer = 1
+    voyelles: integer = 0
+    i: integer
+
+BEGIN
+
+    write "Entrez la phrase se terminant par un point : "
+    read phrase
+
+    FOR i FROM 1 TO LENGTH(phrase) DO
+    
+        longueur = longueur + 1
+
+        
+        IF phrase[i] = " " THEN
+            mots = mots + 1
+        END_IF
+
+        
+        IF phrase[i] = "a" OR phrase[i] = "e" OR phrase[i] = "i" OR phrase[i] = "o" OR phrase[i] = "u" OR 
+           phrase[i] = "A" OR phrase[i] = "E" OR phrase[i] = "I" OR phrase[i] = "O" OR phrase[i] = "U" THEN
+            voyelles = voyelles + 1
+        END_IF
+    END_FOR
+
+    
+    write "Longueur de la phrase:", longueur
+    write "Nombre de mots:", mots
+    write "Nombre de voyelles:", voyelles
+END
+-------------------------------------------------------------------------------------------------------
+
+
